@@ -60,6 +60,7 @@ public class TreeLopper extends AbstractCraftBookMechanic {
                 player.printError("mech.use-permission");
             return;
         }
+        if(player.isSneaking()) return;
 
         if(!EventUtil.passesFilter(event))
             return;
